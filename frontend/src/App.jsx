@@ -91,18 +91,18 @@ const Login = () => {
     <div className="auth-page">
       <div className="glass-container auth-form animate-fade-in">
         <div className="auth-header">
-          <h2>Welcome Back</h2>
+          <h2>Welcome all</h2>
           <p>Sign in to manage your digital passports</p>
         </div>
         {error && <div className="error-message">{error}</div>}
         <form onSubmit={handleLogin}>
           <div className="form-group">
             <label>Email Address</label>
-            <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input type="email" className="form-control" placeholder="Enter your Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
           <div className="form-group">
             <label>Password</label>
-            <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <input type="password" className="form-control" placeholder="Enter your Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
           <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
             {loading ? 'Signing in...' : (<><LogIn size={20} /> Sign In</>)}
@@ -152,15 +152,15 @@ const Register = () => {
         <form onSubmit={handleRegister}>
           <div className="form-group">
             <label>Username</label>
-            <input type="text" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} required />
+            <input type="text" className="form-control" placeholder='Enter your username' value={username} onChange={(e) => setUsername(e.target.value)} required />
           </div>
           <div className="form-group">
             <label>Email Address</label>
-            <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input type="email" className="form-control" placeholder="Enter your Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
           <div className="form-group">
             <label>Password</label>
-            <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6} />
+            <input type="password" className="form-control" placeholder="Enter your Password" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6} />
           </div>
           <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
             {loading ? 'Registering...' : (<><UserPlus size={20} /> Register</>)}
